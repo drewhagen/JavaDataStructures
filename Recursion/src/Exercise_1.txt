@@ -1,0 +1,48 @@
+/*
+ * Drew Hagen
+ * Lab 5
+ * Exercise 1
+ */
+ 
+Given:
+
+	public static int puzzle (int base, int limit)
+	{
+		if (base > limit)
+			Return -1;
+		else
+			if (base == limit)
+				Return 1;
+			return base * puzzle(base + 1, limit);
+	}
+
+•	Identify the following:
+o	The base case(s) of the puzzle method.
+-----------------------------------------------------
+1 is the base case.
+-----------------------------------------------------
+o	The general cases(s) of the puzzle method.
+-----------------------------------------------------
+limit! / base! or limit x limit - 1 x ... x base + 1 x base.
+-----------------------------------------------------
+o	Constraints on the arguments passed to the puzzle method
+-----------------------------------------------------
+base must not be lower than limit
+-----------------------------------------------------
+
+•	Show what would be written by the following calls to the recursive method puzzle:
+o	System.out.println(puzzle (14,20));
+-----------------------------------------------------
+Method: 14(15(16(17(18(19(20))
+Answer: 19535040
+-----------------------------------------------------
+o	System.out.println(puzzle(4,7));
+-----------------------------------------------------
+Method: 4(5(6(7)
+Answer: 120
+-----------------------------------------------------
+o	System.out.println(puzzle(0,0));
+-----------------------------------------------------
+Method: boolean exception, returns 1
+Answer: 1
+-----------------------------------------------------

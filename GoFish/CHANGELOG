@@ -1,0 +1,7 @@
+Deck and pathing works now -ben
+still need to figure out how frames work -ben
+file-> new now works. resets deck and instanciates hand. wipes the frame and paints new cards on. -ben
+cards are now buttons with card emblems. -ben
+deck cards instantiate properly- ben
+dont know how to use layouts and components. the current set up kind of works but to make it any better well need to do completely redo it. -Ben
+cards arent adding to hand on gofish(). somethings fishy about this.

@@ -1,0 +1,34 @@
++ Project Exercise 2 Made in Eclipse
++ Implemented Temperature interface, MyTemperature, and Convert code.
++ Complied the code.
++ Ran it. It works properly!~
+
++ Double.parseDouble() is a method called from class "Double" in the system library. This method
+will convert it's parameter objects into doubles. In this particular code, it is converting the parameters entered
+to args[0] (the first position in args, thus, the first parameter entered in to main) from a String to double.
+This will allow the user to type in the temperature value they want to convert.
+
++ Character.toUpperCase() is a method called to main from class "Character" in the java system library. This method
+takes in a char parameter, and will capitalize it if its not capital already. With the given code in this exercise,
+the method is taking in the char in the String placed in args[1], at position 0 (the first char in the String).
+If used correctly by the user, it will capitalize the scale C or F.
+
++ The method "println()" is being called from System.out to the main class. In one line, it will print out its
+parameters, whether its a toString, an initialized String, or another object.
+In this case, it will print temperature: a new Temperature object implemented by the MyTemperature class (and its
+inner methods) taking in the parameters double value and char scale in that order.
+
++ When the  java Convert 100 C is entered into command prompt, the command prompt will read this in the following way:
+<application> <file> <Program Arguments>
+
+So, java Convert 100 C will run Java, open the class "Convert," and take in "100" and "C" as inputs in that order.
+You can see in class "Convert" that 100 will be taken into args[0] as a String and C will be taken into args[1]
+as a string.
+Following this, 100 will be converted to a double under the name "value", and C will be isolated to a char and become
+capitalized, and placed under the name "scale."
+Since C follows the rule established by the if statement, restricting scale to be only C or F, it will pass through the
+program without returning the usage information.
+These values will then be taken as parameters of a new Temperature object, which will be implemented by the class
+MyTemperature, where the conversion method happens.
+Lastly, the new Temperature object will be printed out to the user.
+

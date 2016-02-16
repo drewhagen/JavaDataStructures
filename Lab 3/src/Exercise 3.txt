@@ -1,0 +1,75 @@
+a)
+----------|--------------------------------------------------------|-------------------|
+STATUS	  |		CODE											   |	WHAT CODE	   |
+OF		  |														   |	IS DOING	   |
+STACK	  |														   |				   |
+----------|--------------------------------------------------------|-------------------|
+		  |	item1 = 1;											   |initializes integer 'item1' to 1 
+		  |	item2 = 0;											   |initializes integer 'item2' to 0
+		  |	item3 = 4;											   |initializes integer 'item3' to 4
+0		  |	stack.push(item2);									   |"pushes" 'item2' on the front of the list.
+1,0		  |	stack.push(item1);	s								   |"pushes" 'item1' on the front of the list.
+5,1,0	  |	stack.push(item1 + item3);							   |"pushes" sum of item1 and item3 on front of list.
+1,0		  |	item2 = stack.pop();								   |"pops" front value off list and reassigns 'item2' to it
+16,1,0	  |	stack.push(item3 * item3);							   |"pushes" square of item3 on front of list.
+5,16,1,0  |	stack.push(item2);									   |"pushes" item2 on front of list.
+3,5,16,1,0|	stack.push(3);										   |"pushes" the integer 3 on front of list.
+5,16,1,0  |	item1 = stack.pop();								   |"pops" front value off list and reassigns 'item1' to 3
+16,1,0	  |	stack.pop();										   |"pops front value off the list.
+		  |	System.out.println(item1 + “ “ + item2 + “ “ + item3); |prints the values of the integers.
+		     prints 3 5 4
+[w1]1,0	  |	while (!stack.isEmpty())							   |Runs the following block of code until list is empty
+[w2]	  |	{													   |	{
+		  |		item1 = stack.pop();							   |"pops" front value off iist and reassigns 'item1' to it
+		  |		stack.pop();									   |"pops" front value off list
+		  |		System.out.println(item1);						   |prints the value of integer item1 (in this case: 1)
+		  |	}													   |	}
+          ---------------------------------------------------------|-------------------|	
+  *w = runs of the while loop.  								   |
+-------------------------------------------------------------------|-------------------|
+
+b)
+
+----------|--------------------------------------------------------|-------------------|
+STATUS	  |		CODE											   |	WHAT CODE	   |
+OF		  |														   |	IS DOING	   |
+STACK	  |														   |				   |
+----------|--------------------------------------------------------|-------------------|
+		  |	item1 = 4;											   |
+		  |	item3 = 0;											   |
+		  |	item2 = item1 + 1;									   |
+5;		  |	stack.push(item2);									   |
+6,5;	  |	stack.push(item2 + 1);								   |
+4,6,5;	  |	stack.push(item1);									   |
+6,5;	  |	item2 = stack.pop();								   |item 2 now equals 4
+5;		  |	stack.pop();										   |
+5;		  |	item1 = item2 + 1;									   |item 1 now equals 5
+5,5;	  |	stack.push(item1);									   |
+0,5,5;	  |	stack.push(item3);									   |
+		  |	while (!stack.isEmpty())							   |
+		  |	{													   |	
+		  |		item3 = stack.pop();							   |first while: item3=0 second while: item3=5
+		  |		stack.pop();									   |
+		  |		System.out.println(item1);						   |first while: item1 prints 5, prints 5 again.
+		  |	}													   |
+          ---------------------------------------------------------|-------------------|
+  *w = runs of the while loop.  								   |
+-------------------------------------------------------------------|-------------------|
+
+		item1 = 4;
+		item3 = 0;
+		item2 = item1 + 1;
+		stack.push(item2);
+		stack.push(item2 + 1);
+		stack.push(item1);
+		item2 = stack.pop();
+		stack.pop();
+		item1 = item2 + 1;
+		stack.push(item1);
+		stack.push(item3);
+		while(!stack.isEmpty())
+		{
+			item3 = stack.pop();
+			stack.pop();
+			System.out.println(item1);
+		}

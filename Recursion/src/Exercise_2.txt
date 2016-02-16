@@ -1,0 +1,38 @@
+/*
+ * Drew Hagen
+ * Lab 5
+ * Exercise 2
+ */
+
+For each of the following recursive methods, identify the base case, the general case, and the constraints on the argument values, and explain what the method does.
+
+•	int recur(int n)
+{	
+	if (n < 0)
+			return -1;
+		else if (n < 10)
+			return 1;
+		else			
+return (1 + recur(n/10));
+	}
+
+-----------------------------------------------------
+1 is the base case.
+n/10 is the general case.
+-----------------------------------------------------	
+	
+	
+•	int recur2(int n)
+{	
+	if (n < 0)
+			return -1;
+		else if (n < 10)
+			return n;
+		else			
+return ((n%10) + recur2(n/10));
+	}  
+
+-----------------------------------------------------
+n is the base case.
+the remainder of n/10 is the general case.
+-----------------------------------------------------

@@ -1,0 +1,70 @@
+http://java.sun.com/docs/books/tutorial/essential/exceptions/index.html
+
+[Q/1]	Is the following code legal?
+
+try {
+    
+} finally {
+    
+}
+[1/A]----------------------------------------------------------------------------------------
+Even though this code isn't designed to do anything, yes-- it is legal.
+
+The try block is an optional design to purposely flag out where an exception (or an error) can occur in code.
+
+The finally block is designed to enclose clean up code for the try block of code.
+
+--------------------------------------------------------------------------------------------
+[Q/2]	What exception types can be caught by the following handler?
+
+catch (Exception e) {
+
+}
+What is wrong with using this type of exception handler?
+[2/A]---------------------------------------------------------------------------------------
+Any exception will be caught with this handler.
+
+The problem with this is that any and all errors will be dealt with the same way.
+
+We cannot specify different exceptions
+--------------------------------------------------------------------------------------------
+[Q/3]	Is there anything wrong with the following exception handler as written? Will this code compile?
+try {
+
+} catch (Exception e) {
+    
+} catch (ArithmeticException a) {
+    
+}
+[3/A]---------------------------------------------------------------------------------------
+This code will compile.
+
+However, the design might not work the way you want it to.
+
+Because there is 'catch (Exception e)' before 'catch (ArithmeticException a)',
+any errors in the try block of code will already be addressed with the first catch block,
+which exception is written to deal with any and all errors in the try block.
+
+The second catch block will be ignored.
+--------------------------------------------------------------------------------------------
+[Q/4]	Match each situation in the first list with an item in the second list.
+
+/a]	int[] A;
+	A[0] = 0;
+/b]	The JVM starts running your program, but the JVM can't find the Java platform classes.
+(The Java platform classes reside in classes.zip or rt.jar.)
+/c]	A program is reading a stream and reaches the end of stream marker.
+/d]	Before closing the stream and after reaching the end of stream marker, a program tries to
+read the stream again.
+
+/1]	__error
+/2]	__checked exception
+/3]	__compile error
+/4]	__no exception
+
+[4/A]---------------------------------------------------------------------------------------
+A == 4
+B == 3
+C == 1
+D == 2
+--------------------------------------------------------------------------------------------

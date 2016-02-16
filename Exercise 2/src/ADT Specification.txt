@@ -1,0 +1,49 @@
+Given the following Set ADT:
+
+Set:  A collection of unique objects.
+
+	Definitions (provided by user):
+		maxObjects:  An integer specifying the maximum number of objects in the set
+
+	void Set(int maxObjects)
+		Effect:  Instantiates this set with a capacity of maxObjects and initializes the
+				set to the empty set
+		Precondition:  maxObjects > 0
+		Postcondition:  This set is empty.
+
+void Set()
+		Effect:  Instantiates this set with a capacity of 100 and initialize this set to an 
+empty state
+		Postcondition:  This set is empty
+
+void add(Object object)
+Effect:  Adds an item to the set.
+Postcondition:  The given object is in this set.
+
+boolean contains(Object object)
+	Effect:  Determines whether the object is in the set
+	Postcondition:  This set is unchanged.
+			  Return value = (object is in the set)
+
+Object getFirst()
+	Effect:  Returns a copy of the first element in the set
+	Postcondition:  This set is unchanged
+			  Return value = (the first element of the set)
+
+Object getNext()
+	Effect:  Returns a copy of the next element in the set
+	Postcondition:  This bag is unchanged
+		              Return value = (some element of this set other than those already
+				returned by the last call to getFirst() and subsequent
+				calls to getNext(); if all elements have been accessed by
+				that previous sequence of calls, then null is returned.
+
+boolean remove(Object object)
+	Effect:  Deletes the object from the set.
+	Postcondition:  The given object is not in this set.
+		 	  Returns value = (object was deleted from set)
+
+integer size()
+	Effect:  Determines the number of objects in the set
+	Postcondition:  This set is unchanged
+			  Return value = (the number of elements in the set)

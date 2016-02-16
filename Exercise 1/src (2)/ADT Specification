@@ -1,0 +1,22 @@
+ADT Specification
+Point: A location on a 2D plane.
+	Definitions (provided by user):
+		x: A double coordinate specifying the alignment of the point with the horizontal grid
+		y: A double coordinate specifying the alignment of the point with the vertical grid
+	double getX()
+Effect: Returns the x coordinate of the point
+Postcondition: The point is unchanged
+	Return value = (the x coordinate of the point)
+	double getY()
+		Effect: Returns the y coordinate of the point
+		Postcondition: The point is unchanged
+			Return value = (the y coordinate of the point)
+	Void setX(double x)
+		Effect: Instantiates the point’s x coordinate
+		Postcondition: The x coordinate of selected point becomes the entered value
+	Void setY(double y)
+		Effect: Instantiates the point’s y coordinate
+		Postcondition: The y coordinate of selected point becomes the entered value
+	Void moveTo(double x, double y)
+		Effect: Instantiates both x and y coordinates / moves the point
+		Postcondition: The point is moved to a new location / the x and y coordinates of the point becomes the entered values.

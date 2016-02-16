@@ -1,0 +1,16 @@
+Bag:  An extension of Set, with the ability to store the results of a relationship between two sets.
+
+NewBag union(NewBag b1, NewBag b2)
+	Effect: creates a new bag that takes in the union of two bags.
+	Precondition: two bags with maxObjects > 0
+		Return value = one bag with maxObjects = size() of the union.
+	
+NewBag intersection(NewBag b1, NewBag b2)
+	Effect: creates a new bag that takes in the intersection of two bags.
+	Precondition: two bags with maxObjects > 0
+		Return value = one bag with maxObjects = size() of the intersection.
+	
+NewBag difference(NewBag b1, NewBag b2)
+	Effect: creates a new bag that takes in the difference after contents from one bag (b2) is removed from another (b1)
+	Precondition: two bags with maxObjects > 0
+		Return value = one bag with maxObjects = size() of the difference.

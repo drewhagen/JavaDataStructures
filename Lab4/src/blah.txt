@@ -1,0 +1,14 @@
+			/*Node pointer = top;
+			System.out.println("b: " + bottom.data + ", "  + bottom.next);
+			for(int i=0; i<sz;) {
+				if (pointer.next == null) {
+					bottom = pointer;
+				}
+				else {
+					System.out.println("pl: " + pointer.data + ", " + pointer.next);
+					pointer = pointer.next;
+				}
+			i++;
+			}
+			System.out.println("b: " + bottom.data + ", "  + bottom.next);
+			System.out.println("r: " + result);*/
