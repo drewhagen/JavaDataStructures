@@ -17,12 +17,13 @@ public NewBag(int maxObjects) {
  * @return one bag that holds the result of the union and the maxObjects equal to the size (no nulls).
  */
 public NewBag union(NewBag b1, NewBag b2) {
-	int newCap = (b1.getMaxObjects() + b2.getMaxObjects());
-	NewBag b3 = new NewBag(newCap);
-	for(int i= 0; i < b1.getMaxObjects(); i++) {
+	int newCap = (b1.getMaxObjects() + b2.getMaxObjects()); //sets the new Capicity to addition of b1 and b2
+	NewBag b3 = new NewBag(newCap); //set = new set
+	for(int i= 0; i < b1.getMaxObjects(); i++) { //start i at 0, end at b1.getMaxObjects (capacity)
 		b3.add(b1.getNext());
 		}
-	for (int k= b1.getMaxObjects(); k < newCap; k++) {
+	for (int k= b1.getMaxObjects(); k < newCap; k++) { //start k at b1.getMaxObjects (capacity of b1)
+		//SO, it starts at the end of b1 . . .
 		if (b3.contains(b2.getNext()) == false)
 		b3.add(b2.getThis());
 	}
